@@ -1,4 +1,4 @@
-Lab10 Web API - Nan Store
+# Lab10 Web API - Nan Store
 
 ## รายละเอียด
 - สร้างฐานข้อมูล MySQL ชื่อ `nan_store`
@@ -13,11 +13,11 @@ lab10_webapi/
 ├── db.php
 ├── lab10_webapi.sql
 ├── README.md
-├── Get all products.png
-├── Get a single product.png
-├── Add a new product.png
-├── Update a product.png
-└── Delete a product.png
+├── get-all-products.png
+├── get-single-product.png
+├── add-new-product.png
+├── update-product.png
+└── delete-product.png
 
 ## การเรียกใช้งาน API
 - Base URL: `http://localhost/lab10_webapi/api.php`
@@ -34,15 +34,11 @@ lab10_webapi/
 
 ## ตัวอย่างเรียก API ด้วย Postman
 
-# Lab10 Web API - Nan Store
-
-## 🛒 Products API
-
 ### 1️⃣ ดูสินค้าทั้งหมด
 Method: GET  
 URL: `/api.php/products`  
 
-![Get all products](Get all products.png)
+![Get all products](get-all-products.png)
 
 ---
 
@@ -50,7 +46,7 @@ URL: `/api.php/products`
 Method: GET  
 URL: `/api.php/products/1`  
 
-![Get a single product](Get a single product.png)
+![Get a single product](get-single-product.png)
 
 ---
 
@@ -66,15 +62,17 @@ Body (JSON):
   "category": "Accessories",
   "image": "https://example.com/mouse.jpg"
 }
-![Add a new product](Add a new product.png)
+```
+![Add a new product](add-new-product.png)
+
+---
 
 4️⃣ แก้ไขสินค้า
 Method: PUT
 URL: /api.php/products/1
 Body (JSON):
 
-json
-Copy code
+```json
 {
   "title": "Logitech Mouse Updated",
   "price": 1300,
@@ -82,10 +80,12 @@ Copy code
   "category": "Accessories",
   "image": "https://example.com/mouse_updated.jpg"
 }
-![Update a product](Update a product.png)
+```
+![Update a product](update-product.png)
+
+---
 
 5️⃣ ลบสินค้า
 Method: DELETE
 URL: /api.php/products/1
-
-![Delete a product](Delete a product.png)
+![Delete a product](delete-product.png)
